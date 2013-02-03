@@ -2,7 +2,7 @@
  * jQuery Switch
  */
 
-.jquery-switch(@width: 50px, @height: 16px) {
+.switch(@width: 50px, @height: 16px) {
   width: @width;
   height: @height;
   margin: @width;
@@ -120,4 +120,8 @@
       margin-right: -@height;
     }
   }
+}
+
+.jquery-switch {
+  .switch();
 }
