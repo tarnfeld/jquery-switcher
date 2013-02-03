@@ -2,9 +2,12 @@ jquery-switcher
 =============
 
 A handy little jquery plugin to make switches akin to the iOS 6 UISwitch
-control. Take alook at the examples in ./example to see how it's used.
+control. Take a look at the examples in ./example to see how it's used.
 
 ![Example](http://f.cl.ly/items/0p3y2n3P2C3l3C472B35/Screen%20Shot%202013-02-03%20at%2017.13.28.png)
+
+- [Live Example 1](http://tarnfeld.com/jquery-switcher/example/single.html)
+- [Live Example 2](http://tarnfeld.com/jquery-switcher/example/double.html)
 
 ### Compilation
 
