@@ -2,10 +2,9 @@
  * jQuery Switch
  */
 
-.switch(@width: 50px, @height: 16px) {
+.switcher(@width: 50px, @height: 16px, @font-size: 10px) {
   width: @width;
   height: @height;
-  margin: @width;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -43,12 +42,13 @@
     height: @height;
     border-radius: @height;
     display: block;
-    font-size: 10px;
+    font-size: @font-size;
     font-family: Helvetica;
     text-transform: uppercase;
     font-weight: bold;
     color: #767676;
     line-height: @height;
+    text-align: center;
     -webkit-transition: all 225ms ease-in-out;
 
     &:after {
@@ -64,16 +64,16 @@
       border-radius: @height + 2px;
     }
 
-    .on {
+    &.on {
       background: #007fea;
       color: #ffffff;
-      text-indent: 12px;
+      text-indent: -(@height - 5px);
       text-shadow: 0 -1px 0 #0069a3;
     }
 
-    .off {
+    &.off {
       background: #eeeeee;
-      text-indent: 20px;
+      text-indent: (@height - 5px);
     }
   }
 
@@ -111,7 +111,7 @@
   }
 
   &.off {
-    .off {
+    .on {
       margin-left: -@width;
     }
 
@@ -122,6 +122,6 @@
   }
 }
 
-.jquery-switch {
-  .switch();
+.jquery-switcher {
+  .switcher();
 }

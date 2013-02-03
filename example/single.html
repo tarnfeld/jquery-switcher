@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example - Single Switch</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/example.css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="lib/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/switcher.plugin.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(".button-example").switcher();
+        $(".large-switch").switcher();
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Single Switch Example</h2>
+    <p>This example shows two seperate switches, one with the default styles and another
+      using a custom less selector to change the dimentions of the switch.</p>
+
+    <div class="button-example on">
+      <div class="inner">
+        <span class="handle">X</span>
+
+        <span class="on label">On</span>
+        <span class="off label">Off</span>
+      </div>
+    </div>
+
+    <div class="large-switch on">
+      <div class="inner">
+        <span class="handle">X</span>
+
+        <span class="on label">Yes</span>
+        <span class="off label">No</span>
+      </div>
+    </div>
+  </body>
+</html>
