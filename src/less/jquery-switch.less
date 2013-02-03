@@ -1,0 +1,123 @@
+/**
+ * jQuery Switch
+ */
+
+.jquery-switch(@width: 50px, @height: 16px) {
+  width: @width;
+  height: @height;
+  margin: @width;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: @height;
+  border: 1px solid #FFF;
+
+  &, * {
+    -webkit-user-select: none;
+  }
+
+  &:before {
+    content: "";
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: @width - 2px;
+    height: @height - 2px;
+    border-radius: @height;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .inner {
+    width: @width * 2;
+    position: absolute;
+  }
+
+  .label {
+    float: left;
+    position: relative;
+    z-index: 1;
+    width: @width;
+    height: @height;
+    border-radius: @height;
+    display: block;
+    font-size: 10px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #767676;
+    line-height: @height;
+    -webkit-transition: all 225ms ease-in-out;
+
+    &:after {
+      content: "";
+      width: @width;
+      height: @height;
+      margin: 0;
+      background: #FFF;
+      opacity: 0.2;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      border-radius: @height + 2px;
+    }
+
+    .on {
+      background: #007fea;
+      color: #ffffff;
+      text-indent: 12px;
+      text-shadow: 0 -1px 0 #0069a3;
+    }
+
+    .off {
+      background: #eeeeee;
+      text-indent: 20px;
+    }
+  }
+
+  .handle {
+    position: absolute;
+    z-index: 2;
+    width: @height;
+    height: @height;
+    background-color: #e9e9e9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d5d5d5),to(#fdfdfd));
+    border-radius: @height;
+    display: block;
+    overflow: hidden;
+    text-indent: -@width * 2;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    -webkit-transition: all 225ms ease-in-out;
+  }
+
+  &:hover {
+    .handle {
+      background: #d4d4d4;
+    }
+  }
+
+  &.on {
+    .on {
+      margin-left: 0;
+    }
+
+    .handle {
+      left: @width - @height;
+    }
+  }
+
+  &.off {
+    .off {
+      margin-left: -@width;
+    }
+
+    .handle {
+      left: 0;
+      margin-right: -@height;
+    }
+  }
+}

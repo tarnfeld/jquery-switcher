@@ -1,0 +1,12 @@
+{
+  "name": "jquery-switch",
+  "authors": {
+    "name": "Tom Arnfeld",
+    "email": "tarnfeld@me.com"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "less": "1.3.3",
+    "yuicompressor": "2.4.7"
+  }
+}
